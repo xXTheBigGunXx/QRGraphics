@@ -25,6 +25,8 @@ I also use the color to denote the different types on zones and their functional
 also called quite zone, so that it is eassier for QR readers to detect QR code. Grey pixels display the QR grid area and the white - quite zone.
 ![image](https://github.com/user-attachments/assets/afae2fc8-3f41-4509-a197-f84425ddb233)
 
-1.
+1.Position and orietation finders. Those are used to know the rotation of a QR code, also used to alignment. Those are just three squares on the top right and left
+corners and the bottom left.
+![image](https://github.com/user-attachments/assets/c7912467-271c-4aff-aa7c-131994e15f94)
 
 
