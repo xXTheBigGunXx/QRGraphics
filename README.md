@@ -16,6 +16,7 @@ This is my personal project where I aim to re-create a QR code generator. Throug
 ##Color meaning
   - Grey - are not filled with information
   - Red - finder patterns.
+  - Green - seperators.
 
 ## QR code creation explained
 
@@ -34,5 +35,7 @@ right and leftcorners and the bottom left. As I mentioned I use the colored pixe
 
 ![image](https://github.com/user-attachments/assets/e9859aa8-de59-4318-867c-7a63d41b43f9)
 
-1. 
+1. The seperators are just used for better QR code decoding and are used to seperate the postion areas from other areas.
+![image](https://github.com/user-attachments/assets/e7685331-cc3d-4efb-b7f5-f63924c6ca42)
+
 
