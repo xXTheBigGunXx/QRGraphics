@@ -32,7 +32,6 @@ also called quite zone, so that it is eassier for QR readers to detect QR code. 
 
 1. Position and orietation finders. Those are used to know the rotation of a QR code, also used to alignment. Those are just three squares on the top 
 right and leftcorners and the bottom left. As I mentioned I use the colored pixel to demote the meaning or the use case of a specific area of a QR code.
-
 ![image](https://github.com/user-attachments/assets/e9859aa8-de59-4318-867c-7a63d41b43f9)
 
 1. The seperators are just used for better QR code decoding and are used to seperate the postion areas from other areas.
