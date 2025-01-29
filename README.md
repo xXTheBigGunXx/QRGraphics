@@ -11,4 +11,8 @@ This is my personal project where I aim to re-create a QR code generator. Throug
 ## Goals  
 - Build a functional QR code generator.  
 - Improve my understanding of GUI development.  
-- Gain experience with Git and GitHub workflows. 
+- Gain experience with Git and GitHub workflows.
+
+## QR code creation explained
+
+
