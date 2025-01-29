@@ -18,7 +18,7 @@ This is my personal project where I aim to re-create a QR code generator. Throug
 1. Firstly I just create a screen that is all white. The only thing that is important for this step what the dimentions 
 of a QR code output are correct to the desired one. Screen needs to be square and the input and the output dimensions differ
 a little bit.
-![image](https://github.com/user-attachments/assets/f61b7343-b826-413e-9fa2-b837031e354b)
+![image](https://github.com/user-attachments/assets/a200bc4e-fc07-44eb-9187-add399e50599)
 
 1. Second step is keeping and displaying the QR grid pixel vaues. I store pixel values in a integer matrix. I use it because 
 I also use the color to denote the different types on zones and their functionality. For now it is important the the QR grid pixels have some padding
