@@ -15,7 +15,7 @@ This is my personal project where I aim to re-create a QR code generator. Throug
 
 ## QR code creation explained
 
--Firstly I just create a screen that is all white. The only thing that is important for this step what the dimentions 
+- Firstly I just create a screen that is all white. The only thing that is important for this step what the dimentions 
 of a QR code output are correct to the desired one. Screen needs to be square and the input and the output dimensions differ
 a little bit.
 
