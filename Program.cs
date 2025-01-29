@@ -34,7 +34,7 @@ namespace QRGraphics
             painting.Dimentions(500);
             qrGridFormation.PositionOrientationFinder();
             qrGridFormation.Seperators();
-            qrGridFormation.Timing();
+            /*qrGridFormation.Timing();
             qrGridFormation.PlaceOnePixel();
             qrGridFormation.EncodingMode();
             qrGridFormation.LengthOfBinary(convertToBinary.Length());
@@ -44,7 +44,7 @@ namespace QRGraphics
             //qrGridFormation.Content(convertToBinary.ReturnArray());
             qrGridFormation.Content(arr);
             //Console.WriteLine(new string('-', 20) + qrGridFormation.CountLeftSpace());
-            qrGridFormation.Masking();
+            qrGridFormation.Masking();*/
 
 
             /*for (int i = 0; i < qrGridFormation.Length(); i++)
@@ -56,7 +56,7 @@ namespace QRGraphics
                 Console.WriteLine();
             }*/
 
-            painting.PlacePixelsOnScreen(qrGridFormation, colorDefault: false);
+            painting.PlacePixelsOnScreen(qrGridFormation, colorDefault: true);
             painting.RunProgram();
 
         }
