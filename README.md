@@ -20,6 +20,11 @@ of a QR code output are correct to the desired one. Screen needs to be square an
 a little bit.
 ![image](https://github.com/user-attachments/assets/f61b7343-b826-413e-9fa2-b837031e354b)
 
+1. Second step is keeping and displaying the QR grid pixel vaues. I store pixel values in a integer matrix. I use it because 
+I also use the color to denote the different types on zones and their functionality. For now it is important the the QR grid pixels have some padding
+also called quite zone, so that it is eassier for QR readers to detect QR code. Grey pixels display the QR grid area and the white - quite zone.
+![image](https://github.com/user-attachments/assets/afae2fc8-3f41-4509-a197-f84425ddb233)
+
 1.
 
 
