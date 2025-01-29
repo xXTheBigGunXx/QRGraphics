@@ -43,18 +43,18 @@ namespace QRGraphics
             qrGridFormation.FormatAndVersionTwo(SecondFormatPattern);
             //qrGridFormation.Content(convertToBinary.ReturnArray());
             qrGridFormation.Content(arr);
-            Console.WriteLine(new string('-', 20) + qrGridFormation.CountLeftSpace());
+            //Console.WriteLine(new string('-', 20) + qrGridFormation.CountLeftSpace());
             qrGridFormation.Masking();
 
 
-            for (int i = 0; i < qrGridFormation.Length(); i++)
+            /*for (int i = 0; i < qrGridFormation.Length(); i++)
             {
                 for (int j = 0; j < qrGridFormation.Width(); j++)
                 {
                     Console.Write($"{qrGridFormation.Get(i, j),3} ");
                 }
                 Console.WriteLine();
-            }
+            }*/
 
             painting.PlacePixelsOnScreen(qrGridFormation, colorDefault: false);
             painting.RunProgram();

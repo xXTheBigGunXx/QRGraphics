@@ -117,7 +117,7 @@ namespace QRGraphics
         public void EncodingMode()
         {
             matrix[this.pixelsInLen - 1, this.pixelsInLen - 1] = 6;
-            matrix[this.pixelsInLen - 1, this.pixelsInLen - 2] = 6;
+            matrix[this.pixelsInLen - 1, this.pixelsInLen - 2] = 7;
             matrix[this.pixelsInLen - 2, this.pixelsInLen - 1] = 6;
             matrix[this.pixelsInLen - 2, this.pixelsInLen - 2] = 6;
         }
