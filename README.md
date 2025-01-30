@@ -20,6 +20,9 @@ This is my personal project where I aim to re-create a QR code generator. Throug
 
 ## *QR code creation explained*
 
+Most expamples will use the version 1 QR grid fromation - 21x21 pixel. Formula to calculate the length of a QR grid formation - N = 4*V + 17.
+V - version, N - length in pixels.
+
 ## 1. Window
 Firstly I just create a screen that is all white. The only thing that is important for this step what the dimentions 
 of a QR code output are correct to the desired one. Screen needs to be square and the input and the output dimensions differ
