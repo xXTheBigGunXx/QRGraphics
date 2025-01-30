@@ -19,6 +19,7 @@ This is my personal project where I aim to re-create a QR code generator. Throug
   - Green - seperators.
   - Orange - timing pattern.
   - Cyan - encoding mode.
+  - Pink - Length of a message.
 
 ## *QR code creation explained*
 
