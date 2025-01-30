@@ -80,3 +80,9 @@ The first aligment pattern will always be the coordinates x = N - 8 and y = N - 
 Then I loop throut the list two times with two loop and the every single coordinte of a top left corner of a aligment pattern. Then I need to check if a aligment pattern touch seperators, position finders and if they do - discarde them. 
 That the reason why there are no aligment patterns near 3 position finders of QR grid.
 
+## 7. One single pixel
+The pixel at the postion (8, N - 8) is black.
+
+![image](https://github.com/user-attachments/assets/964925a3-770f-4c38-bcbf-683bac88fab3)
+
+## 8.
