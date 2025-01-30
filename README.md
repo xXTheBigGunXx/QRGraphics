@@ -57,7 +57,7 @@ continues - black pixel, white pixel, black pixel, white pixel.
 ![image](https://github.com/user-attachments/assets/13980e4e-5376-4f02-9f5e-0cd7bfacc397)
 
 ## 6. Alignmnt pattern
-Alignment pattern is used to correctly interpret the QR code at a angle. The alignment pattern shoes up from the second version and above - the first version doesn't have one. 
+Alignment pattern is used to correctly interpret the QR code at a angle. The alignment pattern shows up from the second version and above - the first version doesn't have one. 
 In this expample I use the version 1 QR code that doesn't have the aligment patter.
 
 ![image](https://github.com/user-attachments/assets/00e52e22-3747-424d-805a-bd5749f6d9fb)
@@ -78,5 +78,5 @@ The first aligment pattern will always be the coordinates x = N - 8 and y = N - 
 ![image](https://github.com/user-attachments/assets/66bc999f-b9cc-4b0e-80c8-8f870050d760)
 
 Then I loop throut the list two times with two loop and the every single coordinte of a top left corner of a aligment pattern. Then I need to check if a aligment pattern touch seperators, position finders and if they do - discarde them. 
-That is why there are no aligment patterns near the 3 corners of QR grid.
+That the reason why there are no aligment patterns near 3 position finders of QR grid.
 
