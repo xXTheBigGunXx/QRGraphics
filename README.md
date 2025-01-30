@@ -66,5 +66,10 @@ This is version 2 with the aligment pattern:
 
 ![image](https://github.com/user-attachments/assets/bd100bdc-dca3-42d1-aec0-c46ce836c9f3)
 
+This is version 7:
+
+![image](https://github.com/user-attachments/assets/78c9702f-02a3-4eaf-9ff6-708f1f82a318)
+
+
 
 
