@@ -91,7 +91,8 @@ Numeric - values of 0-9 and the half byte encoding in binary: 0b0001
 Alphanumeric - 0–9, A–Z (upper-case only), space $, %, *, +, -, ., /, and half byte encoding in binary : 0b0010
 Byte - extended ASCII simbols converted from integer to binary and half byte encoding in binary: ob0100
 Kanji - chines simbols used in japanese language and half byte encoding in binary: 0b1000
-In this example the encoding in byte with the half byte of 0b0100. The half byte in placed in the bottom right corner and placing the bytes like a Z letter:
+In this example the encoding in byte with the half byte of 0b0100. The half byte in placed in the bottom right corner and 
+placing the bytes like a Z letter:
 ![image](https://github.com/user-attachments/assets/94e7b489-8dd0-4b99-9203-e77ca59246f0)
 
 ![image](https://github.com/user-attachments/assets/a58e2035-c23e-40b4-a8f9-d751cbd34d00)
