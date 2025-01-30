@@ -70,7 +70,8 @@ This is version 7:
 
 ![image](https://github.com/user-attachments/assets/78c9702f-02a3-4eaf-9ff6-708f1f82a318)
 
-For every seventh version (starting from version 1) the aligment patterns are added. Version 2 - 6 : 1 aligment pattern; 7 - 13 : 6 aligment patterns; 14 - 20 : 13 alignment patterns and so on.
+For every seventh version (starting from version 1) the aligment patterns are added. Version 1 - 0 aligment patterns; Version 2 - 6 : 1 aligment pattern; 
+Version 7 - 13 : 6 aligment patterns; Version 14 - 20 : 13 alignment patterns and so on.
 The count of aligment patterns are calculated with the formula - C = N // 7 + 2. And the step or the spaces in pixels between the aligment patters - D =  N - 13 // (C-1). C = count and D = distance.
 The first aligment pattern will always be the coordinates x = N - 8 and y = N - 8. The coordinates start at 0. Then we create I create a list of coordinates in the range of 0 and the N with the count and the distance. 
 
