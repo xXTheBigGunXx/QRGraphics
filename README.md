@@ -58,4 +58,7 @@ continues - black pixel, white pixel, black pixel, white pixel.
 
 ## 6. Alignmnt pattern
 Alignment pattern is used to correctly interpret the QR code at a angle. The alignment pattern shoes up from the second version and above - the first version doesn't have one. 
+In this expample I use the version 1 QR code that doesn't have the aligment patter.
+![image](https://github.com/user-attachments/assets/00e52e22-3747-424d-805a-bd5749f6d9fb)
+
 
