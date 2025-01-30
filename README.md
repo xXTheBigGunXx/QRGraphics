@@ -17,6 +17,8 @@ This is my personal project where I aim to re-create a QR code generator. Throug
   - Grey - are not filled with information
   - Red - finder patterns.
   - Green - seperators.
+  - Orange - timing pattern.
+  - Cyan - encoding mode.
 
 ## *QR code creation explained*
 
