@@ -16,6 +16,7 @@ namespace QRGraphics
         {
             ReedSolomon temp = new ReedSolomon();
             string FormatPattern = Encoding.FormatPattern();
+            Console.WriteLine(FormatPattern + "Format pattern");
             string SecondFormatPattern = Encoding.SecondFormatPattern();
 
             ConvertToBinary convertToBinary = new ConvertToBinary("Matas");
@@ -34,17 +35,17 @@ namespace QRGraphics
             painting.Dimentions(500);
             qrGridFormation.PositionOrientationFinder();
             qrGridFormation.Seperators();
-            /*qrGridFormation.Timing();
+            qrGridFormation.Timing();
             qrGridFormation.PlaceOnePixel();
             qrGridFormation.EncodingMode();
             qrGridFormation.LengthOfBinary(convertToBinary.Length());
             qrGridFormation.AlignmentPattern();
             qrGridFormation.FormatAndVersion(FormatPattern);
-            qrGridFormation.FormatAndVersionTwo(SecondFormatPattern);
+            //qrGridFormation.FormatAndVersionTwo(SecondFormatPattern);
             //qrGridFormation.Content(convertToBinary.ReturnArray());
-            qrGridFormation.Content(arr);
+            //qrGridFormation.Content(arr);
             //Console.WriteLine(new string('-', 20) + qrGridFormation.CountLeftSpace());
-            qrGridFormation.Masking();*/
+            qrGridFormation.Masking();
 
 
             /*for (int i = 0; i < qrGridFormation.Length(); i++)

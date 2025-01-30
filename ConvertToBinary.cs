@@ -28,7 +28,7 @@ namespace QRGraphics
 
         public int Length()
         {
-            return this.binaryStrings.Length + 1;
+            return this.message.Length;
         }
 
         private void GetMessage()

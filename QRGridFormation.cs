@@ -133,6 +133,8 @@ namespace QRGraphics
                 binaryRepresentation = '0' + binaryRepresentation;
             }
 
+            Console.WriteLine(binaryRepresentation);
+
             for(int i = 0; i < lengthBytes / 2; i++)
             {
                 for(int j = 0; j < 2; j++)
@@ -155,7 +157,6 @@ namespace QRGraphics
                 for(int j = 0; j < list.Count; j++)
                 {
                     bool overlap = this.Overlapping(list[i] - 2, list[j] - 2);
-                    //Console.WriteLine($"Is it overlaping? {overlap}");
                     if(!overlap)
                     {
                         this.PlaceAlignamenPattern(list[i] - 2, list[j] - 2);
@@ -195,7 +196,10 @@ namespace QRGraphics
                 }
             }
         }
-
+        /// <summary>
+        /// For versions 7 and above
+        /// </summary>
+        /// <param name="FormatPattern"></param>
         public void FormatAndVersionTwo(string FormatPattern)
         {
             if(Encoding.CVersion < 7)
@@ -335,10 +339,6 @@ namespace QRGraphics
             {
                 for(int j = 0; j < this.pixelsInLen; j++)
                 {
-                    /*if (matrix[j, i] == 12)
-                    {
-                        matrix[j, i] = 14;
-                    }*/
                     if (matrix[j,i] == 13)
                     {
                         matrix[j, i] = 15;

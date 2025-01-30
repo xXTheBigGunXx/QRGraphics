@@ -95,7 +95,7 @@ namespace QRGraphics
 
             for(int i = 0; i < intArray.Length; i++)
             {
-                Console.WriteLine($"Byte {i + 1}: {intArray[i]} (Binary: {Convert.ToString(intArray[i], 2).PadLeft(8, '0')})");
+                //Console.WriteLine($"Byte {i + 1}: {intArray[i]} (Binary: {Convert.ToString(intArray[i], 2).PadLeft(8, '0')})");
                 strings[i] = Convert.ToString(intArray[i], 2).PadLeft(8, '0');
             }
             return strings;
