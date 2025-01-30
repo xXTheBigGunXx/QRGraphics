@@ -96,6 +96,7 @@ placing the bytes like a Z letter: (1 - represent the blakc pixel and 0 - white)
 
 ![image](https://github.com/user-attachments/assets/94e7b489-8dd0-4b99-9203-e77ca59246f0)
 
-![image](https://github.com/user-attachments/assets/a58e2035-c23e-40b4-a8f9-d751cbd34d00)
+![image](https://github.com/user-attachments/assets/4e9d4853-8899-47f5-b872-69fc6107c2eb)
+
 
 
