@@ -102,7 +102,7 @@ placing the bytes like a Z letter: (1 - represent the black pixel and 0 - white)
 
 ## 9. Message length
 The top byte near the encoding mode half byte in for storing the messages length. For version 1-9 the length is stored in one bye and in version 10 and more in two bytes.
-
+And the byte or two bytes for the length is stored in the same Z pattern.
 ![image](https://github.com/user-attachments/assets/7b3fe7da-733f-4e02-885d-e49db228afb7)
 
 
