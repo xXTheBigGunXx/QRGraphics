@@ -77,5 +77,6 @@ The first aligment pattern will always be the coordinates x = N - 8 and y = N - 
 (i starts at 0 and end at count -1):
 ![image](https://github.com/user-attachments/assets/66bc999f-b9cc-4b0e-80c8-8f870050d760)
 
-
+Then I loop throut the list two times with two loop and the every single coordinte of a top left corner of a aligment pattern. Then I need to check if a aligment pattern touch seperators, position finders and if they do - discarde them. 
+That is why there are no aligment patterns near the 3 corners of QR grid.
 
