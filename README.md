@@ -139,7 +139,7 @@ The new information is all showed in the blue color near the top right and botto
 ## 11. The data itself
 The data length on the character cont and the  encoding (Byte, Kanji) mode. For examples I use the byte encoding that stores the information as the ACSII values converted to a binary string. 
 
-![image](https://github.com/user-attachments/assets/111406de-8fab-4763-9b0f-1757ad56feb9)
+![image](https://github.com/user-attachments/assets/511777d5-6cfa-474f-8546-a045b4d84628)
 The data just shows the 255 character in the ASCII table - it is just a binary string of 11111111. At the end the 2x2 white square is placed to show the end of a message.
 
 
