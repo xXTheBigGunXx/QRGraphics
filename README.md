@@ -130,3 +130,9 @@ What is how the format and error correction information wrap around the position
 ![image](https://github.com/user-attachments/assets/afe6ffd5-5aa2-41bf-ab2c-43cb84bc20ad)
 
 Information from: https://observablehq.com/@zavierhenry/encoding-qr-codes#versionErrorCorrectionBits
+
+Addicional information is added then the version of a QR code is 7 and above. 
+
+![image](https://github.com/user-attachments/assets/45f60cbd-4fcb-4bb6-aa9b-501786994d6f)
+The new information is all showed in the blue color near the top right and bottom left postion finders.
+
