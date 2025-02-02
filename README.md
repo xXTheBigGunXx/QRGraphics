@@ -142,4 +142,9 @@ The data length on the character cont and the  encoding (Byte, Kanji) mode. For 
 ![image](https://github.com/user-attachments/assets/511777d5-6cfa-474f-8546-a045b4d84628)
 The data just shows the 255 character in the ASCII table - it is just a binary string of 11111111. At the end the 2x2 white square is placed to show the end of a message.
 
+The information in bites should be represented as the Z pattern:
+
+![image](https://github.com/user-attachments/assets/867f473d-55ba-42bd-b2b2-d1af60e6d746)
+Information from: https://www.youtube.com/watch?v=142TGhaTMtI&t=199s&ab_channel=JamesExplains
+
 
