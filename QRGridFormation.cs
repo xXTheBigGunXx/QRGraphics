@@ -133,7 +133,7 @@ namespace QRGraphics
                 binaryRepresentation = '0' + binaryRepresentation;
             }
 
-            Console.WriteLine(binaryRepresentation);
+            //Console.WriteLine(binaryRepresentation);
 
             for(int i = 0; i < lengthBytes / 2; i++)
             {
@@ -202,6 +202,7 @@ namespace QRGraphics
         /// <param name="FormatPattern"></param>
         public void FormatAndVersionTwo(string FormatPattern)
         {
+            //Console.WriteLine(FormatPattern);
             if(Encoding.CVersion < 7)
             {
                 return;

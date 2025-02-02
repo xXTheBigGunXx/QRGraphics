@@ -16,7 +16,7 @@ namespace QRGraphics
         private static string CSecondPattern = "1111100100101";
         private static StringBuilder versionBinary  = new StringBuilder(Convert.ToString(CVersion, 2) + new string('0', 12));
 
-        public const int CVersion = 1;
+        public const int CVersion =1;
         public static string FormatPattern()
         {
             do
