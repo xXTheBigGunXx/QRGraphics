@@ -121,5 +121,12 @@ Information from: https://observablehq.com/@zavierhenry/encoding-qr-codes#versio
 
 The pattern index should be represented in a 3 long bites. Example: pattern 2 (which I use for the examples) in binary form is 010.
 
+There are two areas were the format information and the error correction 10 bites stores: the areas showned in blue
 
 ![image](https://github.com/user-attachments/assets/0fbb4497-e4cd-48f0-a2c6-85ff71e2ce21)
+
+What is how the format and error correction information wrap around the position finders:
+
+![image](https://github.com/user-attachments/assets/afe6ffd5-5aa2-41bf-ab2c-43cb84bc20ad)
+
+Information from: https://observablehq.com/@zavierhenry/encoding-qr-codes#versionErrorCorrectionBits
