@@ -147,4 +147,8 @@ The information in bites should be represented as the Z pattern:
 ![image](https://github.com/user-attachments/assets/867f473d-55ba-42bd-b2b2-d1af60e6d746)
 Information from: https://www.youtube.com/watch?v=142TGhaTMtI&t=199s&ab_channel=JamesExplains
 
+## 12. Masking pattern
+Masking is used to improve the readabily for the QR scanners and scanning accuracy. It is used the make shore that the scanner could seperate the white and the black pixels.
 
+![image](https://github.com/user-attachments/assets/ea10b6ec-82fe-45b0-a0bb-b1edd5d22dcc)
+Information from: https://dev.to/maxart2501/let-s-develop-a-qr-code-generator-part-v-masking-30dl
