@@ -106,6 +106,15 @@ The top byte near the encoding mode half byte in for storing the messages length
 And the byte or two bytes for the length is stored in the same Z pattern.
 ![image](https://github.com/user-attachments/assets/7b3fe7da-733f-4e02-885d-e49db228afb7)
 
+## 10. Format information and the error correction
+The format information shows the error correction level of a QR code and what mask does the QR use.
+Error correction:
+Low: bites - 01; integer - 1
+Medium: bites 00; integer - 0
+Quartile: bites 11; integer - 3
+Hgih: bites 10; integer - 2
+
+![image](https://github.com/user-attachments/assets/0fbb4497-e4cd-48f0-a2c6-85ff71e2ce21)
 
 
 
