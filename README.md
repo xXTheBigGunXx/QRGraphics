@@ -152,3 +152,5 @@ Masking is used to improve the readabily for the QR scanners and scanning accura
 The pattern number should be converted to a 3 long bites in the integer form. Those are the patterns:
 ![image](https://github.com/user-attachments/assets/ea10b6ec-82fe-45b0-a0bb-b1edd5d22dcc)
 Information from: https://dev.to/maxart2501/let-s-develop-a-qr-code-generator-part-v-masking-30dl
+
+## 13. Error correction for the data
