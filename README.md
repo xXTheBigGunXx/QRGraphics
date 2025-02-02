@@ -119,5 +119,7 @@ For masking information:
 ![image](https://github.com/user-attachments/assets/ba97a422-23fa-4622-8230-1ca233d2aa6e)
 Information from: https://observablehq.com/@zavierhenry/encoding-qr-codes#versionErrorCorrectionBits
 
+The pattern index should be represented in a 3 long bites. Example: pattern 2 (which I use for the examples) in binary form is 010.
+
 
 ![image](https://github.com/user-attachments/assets/0fbb4497-e4cd-48f0-a2c6-85ff71e2ce21)
