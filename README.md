@@ -112,9 +112,12 @@ Error correction:
 Low: bites - 01; integer - 1
 Medium: bites 00; integer - 0
 Quartile: bites 11; integer - 3
-Hgih: bites 10; integer - 2
+High: bites 10; integer - 2
+
+For masking information:
+
+![image](https://github.com/user-attachments/assets/ba97a422-23fa-4622-8230-1ca233d2aa6e)
+Information from: https://observablehq.com/@zavierhenry/encoding-qr-codes#versionErrorCorrectionBits
+
 
 ![image](https://github.com/user-attachments/assets/0fbb4497-e4cd-48f0-a2c6-85ff71e2ce21)
-
-
-
