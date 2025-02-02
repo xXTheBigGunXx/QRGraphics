@@ -8,7 +8,7 @@ namespace QRGraphics
 {
     public static class Encoding
     {
-        private static string CFormatAndPattern = "01" + "100";
+        private static string CFormatAndPattern = "01" + "010";
         private static string CPolynomial = "10100110111";
         private static string CFinalPattern = "101010000010010";
         private static StringBuilder biteMask = new StringBuilder(CFormatAndPattern + new string('0',10));

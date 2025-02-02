@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -19,7 +18,7 @@ namespace QRGraphics
             Console.WriteLine(FormatPattern + "Format pattern");
             string SecondFormatPattern = Encoding.SecondFormatPattern();
 
-            ConvertToBinary convertToBinary = new ConvertToBinary("Matas");
+            ConvertToBinary convertToBinary = new ConvertToBinary(/*"MatasMatasMatas"*/ new string(((char)255),15));
             string mess = convertToBinary.ReturnMessage();
             //Console.WriteLine(mess);
 
@@ -44,6 +43,7 @@ namespace QRGraphics
             //qrGridFormation.FormatAndVersionTwo(SecondFormatPattern);
             //qrGridFormation.Content(convertToBinary.ReturnArray());
             //qrGridFormation.Content(arr);
+            qrGridFormation.Content(convertToBinary.ReturnArray());
             //Console.WriteLine(new string('-', 20) + qrGridFormation.CountLeftSpace());
             qrGridFormation.Masking();
 
@@ -57,7 +57,7 @@ namespace QRGraphics
                 Console.WriteLine();
             }*/
 
-            painting.PlacePixelsOnScreen(qrGridFormation, colorDefault: true);
+            painting.PlacePixelsOnScreen(qrGridFormation, colorDefault: false);
             painting.RunProgram();
 
         }

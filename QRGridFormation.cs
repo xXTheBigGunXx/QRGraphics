@@ -341,7 +341,7 @@ namespace QRGraphics
                 {
                     if (matrix[j,i] == 13)
                     {
-                        matrix[j, i] = 15;
+                        matrix[j, i] = 12;
                     }
                 }
             }
