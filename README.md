@@ -149,6 +149,6 @@ Information from: https://www.youtube.com/watch?v=142TGhaTMtI&t=199s&ab_channel=
 
 ## 12. Masking pattern
 Masking is used to improve the readabily for the QR scanners and scanning accuracy. It is used the make shore that the scanner could seperate the white and the black pixels.
-
+The pattern number should be converted to a 3 long bites in the integer form. Those are the patterns:
 ![image](https://github.com/user-attachments/assets/ea10b6ec-82fe-45b0-a0bb-b1edd5d22dcc)
 Information from: https://dev.to/maxart2501/let-s-develop-a-qr-code-generator-part-v-masking-30dl
