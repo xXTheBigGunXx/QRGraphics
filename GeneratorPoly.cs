@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class GeneratorPoly
+static class GeneratorPoly
 {
     private static Dictionary<int, int> map2;
-    private List<int> GeneratorPolynomial(int n)
+    public static List<int> GeneratorPolynomial(int n)
     {
         map2 = GeneratorPoly.NumberWithN2();
 

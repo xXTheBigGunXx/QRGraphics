@@ -18,7 +18,7 @@ namespace QRGraphics
             //Console.WriteLine(FormatPattern + "Format pattern");
             string SecondFormatPattern = Encoding.SecondFormatPattern();
 
-            ConvertToBinary convertToBinary = new ConvertToBinary(/*"MatasMatasMatas"*/ new string(((char)255),15));
+            ConvertToBinary convertToBinary = new ConvertToBinary(/*"MatasMatasMatas"*/ "HELLO WORLD");
             string mess = convertToBinary.ReturnMessage();
             //Console.WriteLine(mess);
 
@@ -26,6 +26,14 @@ namespace QRGraphics
             //convertToBinary.PrintContent();
 
             string [] arr = temp.Run(mess, true);
+
+            List<int> messagePoly = convertToBinary.GetPolynomial();
+            messagePoly.ForEach(i => Console.WriteLine(i));
+
+            Console.WriteLine(new string('-', 60));
+
+            List<int> generatorPoly = GeneratorPoly.GeneratorPolynomial(20);
+            generatorPoly.ForEach(x => Console.WriteLine(x));
 
             QRGridFormation qrGridFormation = new QRGridFormation(Encoding.CVersion);
 
@@ -57,7 +65,7 @@ namespace QRGraphics
                 Console.WriteLine();
             }*/
 
-            painting.PlacePixelsOnScreen(qrGridFormation, colorDefault: false);
+            painting.PlacePixelsOnScreen(qrGridFormation, colorDefault: true);
             painting.RunProgram();
 
         }

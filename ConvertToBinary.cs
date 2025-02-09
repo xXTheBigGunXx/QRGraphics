@@ -15,10 +15,21 @@ namespace QRGraphics
             message = string.Empty;
             this.GetMessage();
         }
-
         public ConvertToBinary(string message)
         {
             this.message = message;
+        }
+
+        public List<int> GetPolynomial()
+        {
+            List<int> result = new List<int>(binaryStrings.Length - 1);
+            
+            for(int i = 0; i < binaryStrings.Length - 1; i++)
+            {
+                result.Add(Convert.ToInt32(binaryStrings[i], 2));
+            }
+
+            return result;
         }
 
         public string ReturnMessage()
