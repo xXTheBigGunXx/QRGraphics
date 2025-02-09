@@ -69,11 +69,13 @@
   <ItemGroup>
     <Compile Include="ConvertToBinary.cs" />
     <Compile Include="Encoding.cs" />
+    <Compile Include="GeneratorPoly.cs" />
     <Compile Include="Painting.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QRGridFormation.cs" />
     <Compile Include="ReedSolomon.cs" />
+    <Compile Include="Terms.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
