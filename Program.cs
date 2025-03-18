@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,27 +14,41 @@ namespace QRGraphics
         [STAThread]
         static void Main(string[] args)
         {
-            ReedSolomon temp = new ReedSolomon();
+            const string message = "HELLO WORLD";
+
+            Encoding.Version(message);
+            Console.WriteLine(Encoding.CVersion);
             string FormatPattern = Encoding.FormatPattern();
-            //Console.WriteLine(FormatPattern + "Format pattern");
             string SecondFormatPattern = Encoding.SecondFormatPattern();
 
-            ConvertToBinary convertToBinary = new ConvertToBinary(/*"MatasMatasMatas"*/ "HELLO WORLD");
-            string mess = convertToBinary.ReturnMessage();
-            //Console.WriteLine(mess);
-
+            ConvertToBinary convertToBinary = new ConvertToBinary(message);
+            Console.WriteLine(convertToBinary.message);
             convertToBinary.ConvertToBinaryStrings();
-            //convertToBinary.PrintContent();
 
-            string [] arr = temp.Run(mess, true);
+            convertToBinary.PaddTillCodeWordsAreFulFilled(Encoding.CodeWordsByVersion(Encoding.CVersion));
+
+            convertToBinary.PrintContent();
+
 
             List<int> messagePoly = convertToBinary.GetPolynomial();
-            messagePoly.ForEach(i => Console.WriteLine(i));
 
             Console.WriteLine(new string('-', 60));
 
-            List<int> generatorPoly = GeneratorPoly.GeneratorPolynomial(20);
+            List<int> generatorPoly = GeneratorPoly.GeneratorPolynomial(10);
             generatorPoly.ForEach(x => Console.WriteLine(x));
+
+            const int n = 7;
+
+
+            List<int> codewords = PolyDivition.DividePolynomials(messagePoly, generatorPoly, n);
+
+            Console.WriteLine(new string('-', 60));
+
+            Console.WriteLine("Generated Codewords: ");
+            foreach (var coef in codewords)
+            {
+                Console.WriteLine(Convert.ToString(coef, 2).PadLeft(8, '0'));
+            }
 
             QRGridFormation qrGridFormation = new QRGridFormation(Encoding.CVersion);
 
@@ -50,20 +65,7 @@ namespace QRGraphics
             qrGridFormation.FormatAndVersion(FormatPattern);
             qrGridFormation.FormatAndVersionTwo(SecondFormatPattern);
             qrGridFormation.Content(convertToBinary.ReturnArray());
-            //qrGridFormation.Content(arr);
-            //qrGridFormation.Content(convertToBinary.ReturnArray());
-            //Console.WriteLine(new string('-', 20) + qrGridFormation.CountLeftSpace());
             qrGridFormation.Masking();
-
-
-            /*for (int i = 0; i < qrGridFormation.Length(); i++)
-            {
-                for (int j = 0; j < qrGridFormation.Width(); j++)
-                {
-                    Console.Write($"{qrGridFormation.Get(i, j),3} ");
-                }
-                Console.WriteLine();
-            }*/
 
             painting.PlacePixelsOnScreen(qrGridFormation, colorDefault: true);
             painting.RunProgram();

@@ -8,23 +8,19 @@ namespace QRGraphics
 {
     public class ConvertToBinary
     {
-        private string[] binaryStrings;
-        private string message {  get; set; }
-        public ConvertToBinary()
-        {
-            message = string.Empty;
-            this.GetMessage();
-        }
+        public List<string> binaryStrings;
+        public string message {  get; set; }
         public ConvertToBinary(string message)
         {
+            binaryStrings = new List<string>();
             this.message = message;
         }
 
         public List<int> GetPolynomial()
         {
-            List<int> result = new List<int>(binaryStrings.Length - 1);
+            List<int> result = new List<int>(binaryStrings.Count - 1);
             
-            for(int i = 0; i < binaryStrings.Length - 1; i++)
+            for(int i = 0; i < binaryStrings.Count - 1; i++)
             {
                 result.Add(Convert.ToInt32(binaryStrings[i], 2));
             }
@@ -32,9 +28,9 @@ namespace QRGraphics
             return result;
         }
 
-        public string ReturnMessage()
+        public string[] ReturnArray()
         {
-            return this.message;
+            return binaryStrings.ToArray();
         }
 
         public int Length()
@@ -51,24 +47,24 @@ namespace QRGraphics
         {
             if(message != string.Empty)
             {
-                binaryStrings = new string[message.Length + 1];
+                binaryStrings = new List<string>(message.Count() + 1);
 
                 for(int i = 0; i < message.Length; i++)
                 {
                     int ASCIIVal = (int)message[i];
                     string shortBinary = Convert.ToString(ASCIIVal, 2);
-                    binaryStrings[i] = this.FillSpace(shortBinary);
+                    binaryStrings.Add(this.FillSpace(shortBinary));
                 }
 
-                binaryStrings[binaryStrings.Length - 1] = "0000";
+                binaryStrings[binaryStrings.Count - 1] = "0000";
             }
         }
 
         public void PrintContent()
         {
-            for(int i = 0; i < binaryStrings.Length; i++)
+            foreach(string i in binaryStrings)
             {
-                Console.WriteLine(binaryStrings[i]);
+                Console.WriteLine(i);
             }
         }
 
@@ -80,10 +76,24 @@ namespace QRGraphics
             }
             return binary;
         }
+        public void PaddTillCodeWordsAreFulFilled(int length)
+        {
+            length += 2;
+            Console.WriteLine(length.ToString() + " " + message.Length.ToString());
+            //length += 2;
+            for (int i = 0; i < (length - message.Length - 1 -1) / 2; i++)
+            {
+                binaryStrings.Add("11101100");
+                binaryStrings.Add("00010001");
+            }
 
-        public string[] ReturnArray()
+            if ((length - message.Length) % 2 == 1)
+                binaryStrings.Add("11101100");
+        }
+
+        /*public List<string> ReturnArray()
         {
             return binaryStrings;
-        }
+        }*/
     }
 }

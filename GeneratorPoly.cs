@@ -30,9 +30,6 @@ static class GeneratorPoly
             poly = CombineWithN(terms, i + 2);
         }
 
-        /*Console.WriteLine(new string('!', 50));
-        poly.ForEach(x => Console.WriteLine(x));*/
-
         return poly;
     }
     private static int Get(int index)

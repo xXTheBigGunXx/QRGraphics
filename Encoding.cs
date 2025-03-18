@@ -16,7 +16,29 @@ namespace QRGraphics
         private static string CSecondPattern = "1111100100101";
         private static StringBuilder versionBinary  = new StringBuilder(Convert.ToString(CVersion, 2) + new string('0', 12));
 
-        public const int CVersion =1;
+        public static int CVersion;
+
+        public static void Version(string message)
+        {
+            if (message.Length <= 17)
+                CVersion = 1;
+            else
+            {
+                CVersion = 2;
+                for (int i = 2; i < 40; i++)
+                {
+                    if (message.Length > CodeWordsByVersion(i))
+                        CVersion = i + 1;
+                    else
+                        break;
+                }
+            }
+        }
+
+        public static int CodeWordsByVersion(int Version)
+        {
+            return (3 * Version * Version) + (6 * Version) + 8;
+        }
         public static string FormatPattern()
         {
             do
@@ -62,6 +84,7 @@ namespace QRGraphics
             polyCopy.Append(new string('0', versionBinary.Length - polyCopy.Length));
 
             StringBuilder result = XOR(versionBinary, polyCopy);
+            Console.WriteLine(result.ToString());
             RemoveZeros(result);
 
             return result;
@@ -108,7 +131,7 @@ namespace QRGraphics
 
         private static void RemoveZeros(StringBuilder strBuilder)
         {
-            while (strBuilder[0] == '0')
+            while (strBuilder[0] == '0' && strBuilder.Length > 1)
             {
                 strBuilder.Remove(0, 1);
             }
