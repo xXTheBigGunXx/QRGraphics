@@ -14,7 +14,8 @@ namespace QRGraphics
         [STAThread]
         static void Main(string[] args)
         {
-            const string message = "HELLO WORLD";
+            string message = "HELLO WORLD";
+
 
             Encoding.Version(message);
             Console.WriteLine(Encoding.CVersion);
@@ -29,26 +30,22 @@ namespace QRGraphics
 
             convertToBinary.PrintContent();
 
+            Console.WriteLine(new string('-', 60));
 
             List<int> messagePoly = convertToBinary.GetPolynomial();
 
-            Console.WriteLine(new string('-', 60));
+            List<int> messagePolyOnlyData = new List<int>();
 
-            List<int> generatorPoly = GeneratorPoly.GeneratorPolynomial(10);
-            generatorPoly.ForEach(x => Console.WriteLine(x));
-
-            const int n = 7;
-
-
-            List<int> codewords = PolyDivition.DividePolynomials(messagePoly, generatorPoly, n);
-
-            Console.WriteLine(new string('-', 60));
-
-            Console.WriteLine("Generated Codewords: ");
-            foreach (var coef in codewords)
+            for (int i = 0; i < message.Length; i++)
             {
-                Console.WriteLine(Convert.ToString(coef, 2).PadLeft(8, '0'));
+                messagePolyOnlyData.Add(messagePoly[i]);
             }
+
+            messagePolyOnlyData.ForEach((x) => Console.WriteLine(x + " " + (char)x));
+
+            Console.WriteLine(new string('-', 60));
+
+           
 
             QRGridFormation qrGridFormation = new QRGridFormation(Encoding.CVersion);
 
@@ -60,10 +57,34 @@ namespace QRGraphics
             qrGridFormation.Timing();
             qrGridFormation.PlaceOnePixel();
             qrGridFormation.EncodingMode();
-            qrGridFormation.LengthOfBinary(convertToBinary.Length());
+            qrGridFormation.LengthOfBinary(message.Length);
             qrGridFormation.AlignmentPattern();
             qrGridFormation.FormatAndVersion(FormatPattern);
             qrGridFormation.FormatAndVersionTwo(SecondFormatPattern);
+            //Console.WriteLine(qrGridFormation.CalculateEmptySpace());
+
+            Encoding.CreateCountForErrorCodeWords(qrGridFormation.CalculateEmptySpace());
+
+            //Console.WriteLine(Encoding.ErrorCodeWordCount);
+
+            List<int> generatorPoly = GeneratorPoly.GeneratorPolynomial(Encoding.ErrorCodeWordCount);
+            generatorPoly.ForEach(x => Console.WriteLine(x));
+
+            int n = Encoding.ErrorCodeWordCount;
+
+            List<int> codewords = new List<int>();
+            codewords = PolyDivition.DividePolynomials(messagePoly, generatorPoly, n);
+
+            Console.WriteLine(new string('-', 60));
+
+            Console.WriteLine("Generated Codewords: ");
+            foreach (int coef in codewords)
+            {
+                Console.WriteLine(Convert.ToString(coef, 2).PadLeft(8, '0'));
+                //Console.WriteLine(coef);
+            }
+
+
             qrGridFormation.Content(convertToBinary.ReturnArray());
             qrGridFormation.Masking();
 

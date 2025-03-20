@@ -17,6 +17,14 @@ namespace QRGraphics
         private static StringBuilder versionBinary  = new StringBuilder(Convert.ToString(CVersion, 2) + new string('0', 12));
 
         public static int CVersion;
+        public static int ErrorCodeWordCount;
+
+        public static void CreateCountForErrorCodeWords(int length)
+        {
+            ErrorCodeWordCount = (int)Math.Ceiling(((double)length - ((CodeWordsByVersion(CVersion) + 2) * 8)) / 8);
+            if(CVersion == 1)
+                ErrorCodeWordCount++;   
+        }
 
         public static void Version(string message)
         {
@@ -37,7 +45,20 @@ namespace QRGraphics
 
         public static int CodeWordsByVersion(int Version)
         {
-            return (3 * Version * Version) + (6 * Version) + 8;
+            switch (Version)
+            {
+                case 1: return 17;
+                case 2: return 32;
+                case 3: return 53;
+                case 4: return 78;
+                case 5: return 106;
+                case 6: return 134;
+                case 7: return 154;
+                case 8: return 192;
+                case 9: return 230;
+                case 10: return 271;
+                default: return 0;
+            }
         }
         public static string FormatPattern()
         {

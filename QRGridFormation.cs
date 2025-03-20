@@ -32,6 +32,21 @@ namespace QRGraphics
                 }
             }
         }
+
+        public int CalculateEmptySpace()
+        {
+            int count = 0;
+
+            for (int i = 0; i < this.pixelsInLen; i++)
+            {
+                for (int j = 0; j < this.pixelsInLen; j++)
+                {
+                    if (matrix[i, j] == -1) count++;
+                }
+            }
+
+            return count;
+        }
         public int Get(int i, int j)
         {
             if(i < 0 || i > matrix.GetLength(0))

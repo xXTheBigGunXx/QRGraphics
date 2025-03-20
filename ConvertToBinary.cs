@@ -18,9 +18,9 @@ namespace QRGraphics
 
         public List<int> GetPolynomial()
         {
-            List<int> result = new List<int>(binaryStrings.Count - 1);
-            
-            for(int i = 0; i < binaryStrings.Count - 1; i++)
+            List<int> result = new List<int>(binaryStrings.Count);
+             
+            for(int i = 0; i < binaryStrings.Count; i++)
             {
                 result.Add(Convert.ToInt32(binaryStrings[i], 2));
             }
@@ -56,7 +56,7 @@ namespace QRGraphics
                     binaryStrings.Add(this.FillSpace(shortBinary));
                 }
 
-                binaryStrings[binaryStrings.Count - 1] = "0000";
+                binaryStrings.Add("0000");
             }
         }
 
